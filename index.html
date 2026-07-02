@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Discard — Issue No. 1 | Bloom Studios</title>
+<meta name="description" content="The Discard is a newsletter for people who think about mahjong more than they probably should. Issue No. 1 by Bloom Studios.">
+<meta property="og:title" content="The Discard — Issue No. 1 | Bloom Studios">
+<meta property="og:description" content="A newsletter for people who think about mahjong more than they probably should.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+  /* Force Squarespace overrides */
+  #bloom-newsletter, #bloom-newsletter * { box-sizing: border-box !important; }
+  .discard-header { background-color: #2c2c2c !important; color: #faf7f2 !important; }
+  .discard-ticker { background-color: #7a9e87 !important; color: white !important; }
+  .discard-tip-box { background-color: #2c2c2c !important; }
+  .discard-confession { background-color: #f5d5c0 !important; }
+  .discard-plug { background: linear-gradient(135deg, #7a9e87 0%, #5a8068 100%) !important; }
+  .discard-subscribe { background-color: #2c2c2c !important; }
+  .discard-footer { background-color: #2c2c2c !important; }
+  .discard-pullquote { background-color: #eef4f0 !important; border-left: 3px solid #7a9e87 !important; }
+  .discard-paper { background-color: #faf7f2 !important; }
+  .discard-body-wrap { background-color: #e8e4dd !important; padding: 2.5rem 1rem 5rem !important; }
+  :root {
+    --sage: #7a9e87;
+    --sage-light: #c2d8c8;
+    --sage-pale: #eef4f0;
+    --peach: #e8a98a;
+    --peach-light: #f5d5c0;
+    --cream: #faf7f2;
+    --ink: #2c2c2c;
+    --ink-soft: #5a5a5a;
+    --ink-lighter: #8a8a8a;
+    --rule: #ddd8d0;
+    --bloom-accent: #c17b5c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e4dd !important;
+    font-family: 'Lora', Georgia, serif;
+    color: var(--ink) !important;
+  }
+
+  /* ===================== */
+  /* SITE NAV BAR          */
+  /* ===================== */
+  .site-nav {
+    background: white !important;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .site-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .site-nav-logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .site-nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--ink) !important;
+  }
+
+  .site-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .site-nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft) !important;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .site-nav-links a:hover { color: var(--sage) !important; }
+
+  .nav-subscribe-btn {
+    background: var(--sage) !important;
+    color: white !important;
+    padding: 0.45rem 1.1rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .nav-subscribe-btn:hover { background: #5a8068 !important; color: white !important; }
+
+  /* ===================== */
+  /* ISSUE BANNER          */
+  /* ===================== */
+  .issue-banner {
+    background: var(--sage-pale) !important;
+    border-bottom: 1px solid var(--sage-light);
+    padding: 0.6rem 2rem;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage) !important;
+  }
+
+  .issue-banner a {
+    color: var(--sage) !important;
+    text-decoration: underline;
+  }
+
+  /* ===================== */
+  /* PAGE WRAPPER          */
+  /* ===================== */
+  .page-wrap {
+    padding: 2.5rem 1rem 5rem;
+  }
+
+  .paper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--cream) !important;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.08);
+    position: relative;
+  }
+
+  /* ===================== */
+  /* HEADER                */
+  /* ===================== */
+  .header {
+    background: var(--ink) !important;
+    padding: 3rem 3rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(122,158,135,0.25) 0%, transparent 70%) !important;
+    border-radius: 50%;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(232,169,138,0.2) 0%, transparent 70%) !important;
+    border-radius: 50%;
+  }
+
+  .issue-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--sage-light) !important;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .masthead {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 700;
+    color: var(--cream) !important;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .masthead em {
+    font-style: italic;
+    color: var(--peach) !important;
+  }
+
+  .tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--sage-light) !important;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===================== */
+  /* TICKER                */
+  /* ===================== */
+  .ticker {
+    background: var(--sage) !important;
+    padding: 0.9rem 3rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: white !important;
+  }
+
+  .ticker-label { opacity: 0.6; margin-bottom: 0.5rem; }
+
+  .ticker-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .ticker-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .ticker-list li::before {
+    content: '';
+    display: inline-block;
+    width: 5px; height: 5px;
+    background: var(--peach) !important;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ===================== */
+  /* BODY                  */
+  /* ===================== */
+  .body { padding: 0 3rem; }
+
+  .scene {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .scene-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sage) !important;
+    margin-bottom: 1.2rem;
+  }
+
+  .scene p { font-size: 1.05rem; line-height: 1.8; color: var(--ink) !important; }
+  .scene p + p { margin-top: 1rem; }
+  .scene p em { font-style: italic; color: var(--bloom-accent) !important; }
+
+  .scene p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.12em;
+    margin-top: 0.1em;
+    color: var(--sage) !important;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink) !important;
+  }
+
+  .section-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink-lighter) !important;
+  }
+
+  .section p { font-size: 0.97rem; line-height: 1.85; color: var(--ink-soft) !important; }
+  .section p + p { margin-top: 1rem; }
+  .section strong { color: var(--ink) !important; font-weight: 500; }
+
+  .pullquote {
+    margin: 1.8rem 0;
+    padding: 1.5rem 2rem;
+    background: var(--sage-pale) !important;
+    border-left: 3px solid var(--sage);
+  }
+
+  .pullquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink) !important;
+  }
+
+  .pullquote cite {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage) !important;
+    margin-top: 0.75rem;
+    font-style: normal;
+  }
+
+  .tip-box {
+    margin: 1.8rem 0;
+    background: var(--ink) !important;
+    padding: 1.8rem 2rem;
+  }
+
+  .tip-box-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--peach) !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .tip-box p { font-size: 0.95rem; line-height: 1.75; color: var(--sage-light) !important; }
+  .tip-box strong { color: var(--peach) !important; }
+
+  .confession {
+    background: var(--peach-light) !important;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+
+  .confession::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: var(--peach) !important;
+    position: absolute;
+    top: -0.5rem; left: 1.2rem;
+    line-height: 1;
+    opacity: 0.5;
+  }
+
+  .confession p {
+    font-size: 0.97rem !important;
+    line-height: 1.8 !important;
+    color: var(--ink) !important;
+    padding-left: 1rem;
+  }
+
+  .confession cite {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bloom-accent) !important;
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    font-style: normal;
+  }
+
+  .bloom-plug {
+    background: linear-gradient(135deg, var(--sage) 0%, #5a8068 100%) !important;
+    padding: 2rem 2.5rem;
+    margin: 2rem -3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .bloom-plug-icon { font-size: 2.5rem; flex-shrink: 0; }
+
+  .bloom-plug-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-style: italic;
+    color: white !important;
+    margin-bottom: 0.4rem;
+  }
+
+  .bloom-plug-text p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--sage-light) !important;
+    line-height: 1.5;
+  }
+
+  .bloom-plug-text p strong { color: var(--peach-light) !important; }
+
+  hr.ornament {
+    border: none;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--sage) !important;
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+  }
+
+  hr.ornament::after { content: '✦  ✦  ✦'; }
+
+  /* ===================== */
+  /* SUBSCRIBE BLOCK       */
+  /* ===================== */
+  .subscribe-block {
+    background: var(--ink) !important;
+    padding: 2.5rem 3rem;
+    text-align: center;
+  }
+
+  .subscribe-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: white !important;
+    margin-bottom: 0.6rem;
+  }
+
+  .subscribe-block p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5) !important;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .subscribe-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08) !important;
+    color: white !important;
+    outline: none;
+  }
+
+  .subscribe-form input::placeholder { color: rgba(255,255,255,0.3) !important; }
+
+  .subscribe-form button {
+    padding: 0.75rem 1.4rem;
+    background: var(--sage) !important;
+    color: white !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .subscribe-form button:hover { background: #5a8068 !important; }
+
+  .subscribe-note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem !important;
+    color: rgba(255,255,255,0.25) !important;
+    letter-spacing: 0.08em;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ===================== */
+  /* SHARE BAR             */
+  /* ===================== */
+  .share-bar {
+    background: var(--sage-pale) !important;
+    border-top: 1px solid var(--sage-light);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .share-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-lighter) !important;
+  }
+
+  .share-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .share-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage) !important;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--sage-light);
+    background: white !important;
+  }
+
+  .share-links a:hover { background: var(--sage) !important; color: white !important; }
+
+  /* ===================== */
+  /* FOOTER                */
+  /* ===================== */
+  .footer {
+    background: var(--ink) !important;
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--sage-light) !important;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.3) !important;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  .footer a {
+    color: var(--sage-light) !important;
+    text-decoration: underline;
+  }
+
+  /* ===================== */
+  /* ARCHIVE NAV           */
+  /* ===================== */
+  .archive-nav {
+    max-width: 680px;
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+
+  .archive-nav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft) !important;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+
+  .archive-nav a:hover { opacity: 1; color: var(--sage) !important; }
+
+  .archive-nav .next { opacity: 1; color: var(--sage) !important; }
+
+  /* ===================== */
+  /* RESPONSIVE            */
+  /* ===================== */
+  @media (max-width: 600px) {
+    .body { padding: 0 1.5rem; }
+    .header { padding: 2rem 1.5rem 2.5rem; }
+    .ticker { padding: 0.8rem 1.5rem; }
+    .bloom-plug { margin: 2rem -1.5rem; flex-direction: column; gap: 1rem; }
+    .footer { padding: 2rem 1.5rem; }
+    .share-bar { padding: 1rem 1.5rem; }
+    .subscribe-block { padding: 2rem 1.5rem; }
+    .subscribe-form { flex-direction: column; }
+    .site-nav-links a:not(.nav-subscribe-btn) { display: none; }
+    .archive-nav { padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <a href="https://www.bloomstudiosco.com" class="site-nav-logo">
+    <span class="site-nav-name">🌸 Bloom Studios</span>
+  </a>
+  <div class="site-nav-links">
+    <a href="https://www.bloomstudiosco.com/local-events">Events</a>
+    <a href="https://www.instagram.com/thebloom.studios">Instagram</a>
+    <a href="https://www.bloomstudiosco.com/subscribe-for-events-news-more" target="_blank" class="nav-subscribe-btn">Subscribe</a>
+  </div>
+</nav>
+
+<!-- ISSUE BANNER -->
+<div class="issue-banner">
+  The Discard · Issue No. 1
+</div>
+
+<div class="page-wrap discard-body-wrap">
+
+  <div class="paper discard-paper" id="bloom-newsletter">
+
+    <!-- HEADER -->
+    <div class="header discard-header">
+      <div class="issue-label">Issue No. 1 &nbsp;·&nbsp; Summer 2026 &nbsp;·&nbsp; By Bloom Studios</div>
+      <div class="masthead">The<br><em>Discard</em></div>
+      <div class="tagline">A newsletter for people who think about mahjong more than they probably should</div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker discard-ticker">
+      <div class="ticker-label">In this issue</div>
+      <ul class="ticker-list">
+        <li>The Discard Moment</li>
+        <li>Tile Tip</li>
+        <li>Ask the Table</li>
+        <li>Confessional</li>
+      </ul>
+    </div>
+
+    <div class="body">
+
+      <!-- OPENING SCENE -->
+      <div class="scene">
+        <div class="scene-label">The Discard Moment</div>
+        <p>You've been holding that tile for four turns. You know you shouldn't. Your hand is going nowhere, your wall is almost gone, and the person across from you is <em>discarding way too confidently</em> for someone who hasn't won in three weeks.</p>
+        <p>You let it go. Someone calls it immediately. Of course they do.</p>
+        <p>Here's the thing: that moment — that specific, sinking, <em>oh no</em> moment — is shared by every single person who has ever sat down at a mahjong table. Beginner or veteran. It doesn't matter. The tiles humble us all. That's why we're here.</p>
+        <p>Welcome to <em>The Discard</em>. A newsletter for the group chat, the weeknight table, the player who just learned what a pung is and the one who's been playing for thirty years. Pull up a chair.</p>
+      </div>
+
+      <!-- TILE TIP -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-name">Tile Tip</div>
+          <div class="section-tag">For Every Level</div>
+        </div>
+
+        <div class="tip-box discard-tip-box">
+          <div class="tip-box-label">🌿 This Week's Tip</div>
+          <p><strong>Stop falling in love with your hand.</strong> It's the number one thing that separates a player who wins from a player who almost wins. You spotted a gorgeous hand on the card in the first Charleston — two flowers, a pair, everything lining up. Beautiful. And then the tiles stopped coming. The smart move is to pivot. The fun move is to keep chasing. The newsletter move is to remind you: <strong>the card doesn't care about your vision board.</strong></p>
+        </div>
+
+        <p>For beginners: it can feel like there's only one "right" hand to play. There isn't. Part of learning is recognizing when to cut your losses and chase something that's actually alive in the wall. The sooner you make peace with changing direction, the more fun you'll have.</p>
+        <p>For experienced players: you already know this. And yet. 😂</p>
+      </div>
+
+      <!-- ASK THE TABLE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-name">Ask the Table</div>
+          <div class="section-tag">Reader Questions · Answered</div>
+        </div>
+        <p>Every issue we answer one question from the community — strategy, etiquette, beginner confusion, group dynamics. Nothing is too basic. Nothing is too niche. The table has seen it all.</p>
+
+        <div class="tip-box">
+          <div class="tip-box-label">💬 This Issue's Question</div>
+          <p><strong>"I've been playing for about six months and I still feel like I'm the slowest one at the table. Everyone else seems to just know what to discard. Am I doing something wrong?"</strong></p>
+        </div>
+
+        <p>You're not doing anything wrong — you're doing exactly what six months in looks like. Here's the thing nobody tells beginners: experienced players aren't faster because they think less. They're faster because they've already had the same internal argument you're having right now about a thousand times, and they know how it ends.</p>
+        <p>The speed comes from pattern recognition, not confidence. The more hands you see — at the table, in practice, just flipping through the card — the faster your brain starts matching tiles to possibilities without you having to consciously walk through every option. It's not a shortcut. It's just repetition doing its job.</p>
+        <p>Give yourself the full year. You'll surprise yourself.</p>
+        <p style="margin-top:1.5rem; font-style:italic; color:var(--ink-lighter); font-size:0.88rem;">Have a question for the table? <a href="mailto:hello@bloomstudiosco.com" style="color:var(--sage);">Send it here.</a> We read every one.</p>
+      </div>
+
+      <!-- CONFESSIONAL -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-name">The Confessional</div>
+          <div class="section-tag">Anonymous · Reader Submitted</div>
+        </div>
+        <p>Every issue, we share one anonymous mahjong confession. Because this game will humble you, and you shouldn't have to be humble alone.</p>
+
+        <div class="confession discard-confession">
+          <p>I once called a tile, announced mahjong, and then realized I had the wrong hand on the card. I was a couple of tiles off from what was actually there — I don't even know what I thought I was doing. I had to sit there and retract my mahjong in front of everyone. The table was gracious enough not to call my hand dead. But it was definitely embarrassing. We don't talk about it.</p>
+          <cite>— Anonymous, Pacific Northwest</cite>
+        </div>
+
+        <p>Have a confession? <a href="mailto:hello@bloomstudiosco.com" style="color:var(--sage);">Send it here.</a> All submissions are anonymous. All of us have been there.</p>
+      </div>
+
+      <!-- PULLQUOTE -->
+      <div class="pullquote discard-pullquote">
+        <p>"I came for the game. I stayed for the people. I keep coming back for both — and honestly, the snacks."</p>
+        <cite>— Overheard at a weeknight game, somewhere in Georgia</cite>
+      </div>
+
+      <!-- APP SECTION -->
+      <div class="bloom-plug discard-plug">
+        <div class="bloom-plug-icon">🌸</div>
+        <div class="bloom-plug-text">
+          <h4>Practice between sessions — anywhere, anytime</h4>
+          <p>Use your own NMJL card or any card of your choice. Solo practice, tutorials, and more. <strong>$4.99 one-time fee.</strong> No subscription. No data collection. No WiFi needed after your first download.</p>
+          <p style="margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.15);">
+            <span style="display:block; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:0.5rem;">Download the app</span>
+            <a href="http://apps.apple.com/us/app/first-bloom-mahjong-anywhere/id6768630772" style="display:block; color:var(--peach-light); text-decoration:none; font-size:0.82rem; font-weight:500; margin-bottom:0.4rem;">🍎 First Bloom: Mahjong Anywhere — iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.bloomstudios.bloommahjongany&pcampaignid=web_share" style="display:block; color:var(--peach-light); text-decoration:none; font-size:0.82rem; font-weight:500;">🤖 Bloom Mahjong Anywhere — Android</a>
+          </p>
+          <p style="margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.15);">
+            <span style="display:block; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:0.5rem;">Find us</span>
+            <a href="https://www.bloomstudiosco.com/local-events" style="display:block; color:var(--sage-light); text-decoration:none; font-size:0.82rem; font-weight:500; margin-bottom:0.4rem;">📍 Local events near you</a>
+            <a href="https://www.instagram.com/thebloom.studios" style="display:block; color:var(--sage-light); text-decoration:none; font-size:0.82rem; font-weight:500; margin-bottom:0.4rem;">📱 @thebloom.studios on Instagram</a>
+            <a href="https://www.instagram.com/lessonswithallison" style="display:block; color:var(--sage-light); text-decoration:none; font-size:0.82rem; font-weight:500;">📱 @lessonswithallison on Instagram</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="section">
+        <hr class="ornament">
+        <p>Thanks for being here for Issue No. 1. <em>The Discard</em> comes out twice a month. Forward this to the person in your group who needed that tile tip most. They know who they are.</p>
+        <p style="margin-top:1rem;">Until next time: discard wisely. Or don't. We'll be here either way.</p>
+        <p style="margin-top:1rem; font-family:'DM Sans',sans-serif; font-size:0.8rem; color:var(--ink-lighter);">— The Bloom Studios Team</p>
+      </div>
+
+    </div><!-- /body -->
+
+    <!-- SHARE BAR -->
+    <div class="share-bar">
+      <span class="share-label">Share this issue</span>
+      <div class="share-links">
+        <a href="#" onclick="navigator.clipboard.writeText('https://bloom-studios-co-llc.github.io/the-discard/'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy Link', 2000); return false;">Copy Link</a>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe-block discard-subscribe" id="subscribe">
+      <h3>Never miss an issue</h3>
+      <p>The Discard lands twice a month. No spam, no fluff — just mahjong, community, and the occasional confession.</p>
+      <a href="https://www.bloomstudiosco.com/subscribe-for-events-news-more" target="_blank" style="display:inline-block; margin-top:0.5rem; padding:0.85rem 2rem; background:#7a9e87; color:white; font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none;">Subscribe Now</a>
+      <p class="subscribe-note">No spam. Unsubscribe anytime. We don't share your info.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer discard-footer">
+      <div class="footer-logo">Bloom Studios</div>
+      <p>
+        <a href="https://www.bloomstudiosco.com">bloomstudiosco.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.bloomstudiosco.com/local-events">Local Events</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.instagram.com/thebloom.studios">@thebloom.studios</a>
+      </p>
+      <p style="margin-top:0.5rem;">Made with love for the American Mahjong community</p>
+    </div>
+
+  </div><!-- /paper -->
+
+  <!-- ARCHIVE NAV -->
+  <div class="archive-nav">
+    <span></span>
+    <a href="https://bloom-studios-co-llc.github.io/the-discard/issue-02.html" class="next">Issue No. 2 — The Charleston Issue →</a>
+  </div>
+
+</div><!-- /page-wrap -->
+
+</body>
+</html>
